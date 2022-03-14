@@ -111,8 +111,7 @@ bot.command('janm', async ctx =>{
       }
   })
   }
+  myLove('btn_j', './img/ja.jpg', text.text )
 
 //start
 bot.launch()
-
-myLove('btn_j', './img/ja.jpg', text.text )
