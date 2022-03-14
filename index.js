@@ -78,5 +78,41 @@ handlerActioin('btn_ux', './img/img.jpg', text.myTxt)
 handlerActioin('btn_en', './img/english.jpg', text.myTxt1)
 handlerActioin('btn_js', './img/js.jpg', text.myTxt2)
 
+
+bot.command('janm', async ctx =>{
+  try{
+    await ctx.replyWithHTML(
+      '<b>MY LOVE</b>',
+      Markup.inlineKeyboard([
+        [Markup.button.callback('JANM  ❤️ ', 'btn_j')],
+        [Markup.button.callback('MY DARLING  😍', 'btn_j')],
+        [Markup.button.callback('MY LOVE    💕  ', 'btn_j')],
+        [Markup.button.callback('MY LIVE   😇 ', 'btn_j')],
+        [Markup.button.callback('MY WIFE  😜 ', 'btn_j')],
+      ])
+    )
+  }catch (e){
+    console.error(e)
+  }
+  })
+  const myLove  = (btnName, photo, txt) => {
+    bot.action(btnName, async ctx => {
+      try{
+        // убирает таймер с кнопки
+        await ctx.answerCbQuery()
+        if(photo !== false) {
+          await ctx.replyWithPhoto({
+            source: photo,
+          })
+        }
+        await ctx.replyWithHTML(txt)
+      } catch (e){
+        console.error(e)
+      }
+  })
+  }
+
 //start
 bot.launch()
+
+myLove('btn_j', './img/ja.jpg', text.text )

@@ -28,3 +28,24 @@ module.exports.commands = commands
 module.exports.myTxt = myTxt
 module.exports.myTxt1 = myTxt1
 module.exports.myTxt2 = myTxt2
+
+const text = `
+Darling, [13.03.2022 22:43]
+Жаан
+
+Жумабек, [13.03.2022 22:43]
+оу
+
+Darling, [13.03.2022 22:43]
+🥰😘😍
+
+Жумабек, [13.03.2022 22:43]
+оу
+
+Жумабек, [13.03.2022 22:44]
+угуп атам
+
+Darling, [13.03.2022 22:44]
+Сизди суйом
+`
+module.exports.text = text
